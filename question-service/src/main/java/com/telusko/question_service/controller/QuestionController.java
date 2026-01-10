@@ -41,7 +41,7 @@ public class QuestionController {
         return questionService.getQuestionForQuiz(categoryName,  numQuestions);
     }
 
-    @GetMapping("getQuestions")
+    @PostMapping("getQuestions")
     public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
         return questionService.getQuestionFromId(questionIds);
     }
